@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Galería de fotos de BRODERS." />
+  <title>GALERÍA | BRODERS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="BRODERS.css" />
+</head>
+<body class="page-interna page-galeria">
+
+  <!-- HEADER / NAVEGACIÓN (idéntico en las 6 páginas)
+       Desktop: logo izq + links + icono usuario der
+       Mobile:  hamburguesa izq + logo centro + icono usuario der -->
+  <header class="header" id="header">
+    <div class="header__inner">
+
+      <button class="header__burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="index.html" class="header__logo" aria-label="BRODERS - Inicio">
+        <img src="./imagenes/logo%20broders.jpg" alt="BRODERS" />
+      </a>
+
+      <nav class="header__nav" aria-label="Navegación principal">
+        <a href="menu.html">MENÚ</a>
+        <a href="nosotros.html">SOBRE NOSOTROS</a>
+        <a href="galeria.html" aria-current="page">GALERÍA</a>
+        <a href="reservas.html">RESERVAS</a>
+        <a href="contacto.html">CONTACTO</a>
+      </nav>
+
+      <button class="header__user" aria-label="Cuenta de usuario" title="Cuenta de usuario (no disponible)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <circle cx="12" cy="8" r="4" />
+          <path d="M4 20c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- PANEL LATERAL MOBILE (drawer) -->
+  <div class="drawer-overlay" id="drawerOverlay" hidden></div>
+  <aside class="drawer" id="drawer" aria-hidden="true" aria-label="Menú de navegación móvil">
+    <div class="drawer__head">
+      <img src="./imagenes/logo%20broders.jpg" alt="BRODERS" class="drawer__logo" />
+      <button class="drawer__close" id="drawerClose" aria-label="Cerrar menú">&times;</button>
+    </div>
+    <nav class="drawer__nav">
+      <a href="index.html">INICIO</a>
+      <a href="menu.html">MENÚ</a>
+      <a href="nosotros.html">SOBRE<br>NOSOTROS</a>
+      <a href="galeria.html" aria-current="page">GALERÍA</a>
+      <a href="reservas.html">RESERVAS</a>
+      <a href="contacto.html">CONTACTO</a>
+    </nav>
+  </aside>
+
+  <main>
+
+    <section id="galeria" class="section section--gallery">
+      <h2 class="section__title">GALERÍA</h2>
+      <div class="gallery" id="gallery">
+        <figure class="gallery__item"><img src="./imagenes/p4_img1.jpeg" alt="Barman preparando un trago en BRODERS" loading="lazy" /></figure>
+        <figure class="gallery__item"><img src="./imagenes/p4_img2.jpeg" alt="Hamburguesa con cheddar y bacon" loading="lazy" /></figure>
+        <figure class="gallery__item"><img src="./imagenes/p4_img3.jpeg" alt="Detalle de cerveza artesanal" loading="lazy" /></figure>
+        <figure class="gallery__item"><img src="./imagenes/p4_img4.jpeg" alt="Clienta disfrutando una cerveza" loading="lazy" /></figure>
+        <figure class="gallery__item"><img src="./imagenes/p4_img5.jpeg" alt="Cerveza y papas cargadas" loading="lazy" /></figure>
+        <figure class="gallery__item"><img src="./imagenes/p4_img6.jpeg" alt="Banda en vivo en el local" loading="lazy" /></figure>
+        <figure class="gallery__item"><img src="./imagenes/p4_img7.jpeg" alt="Cartel de neón de BRODERS" loading="lazy" /></figure>
+        <figure class="gallery__item"><img src="./imagenes/p3_img2.jpeg" alt="Público bajo las luces del patio" loading="lazy" /></figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> BRODERS — Bar &amp; Cervecería Artesanal · Nordelta, Argentina</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

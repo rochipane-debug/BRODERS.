@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="BRODERS: tu "Segunda Casa" en Nordelta." />
+  <title>SOBRE NOSOTROS | BRODERS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="BRODERS.css" />
+</head>
+<body class="page-interna page-nosotros">
+
+  <!-- HEADER / NAVEGACIÓN (idéntico en las 6 páginas)
+       Desktop: logo izq + links + icono usuario der
+       Mobile:  hamburguesa izq + logo centro + icono usuario der -->
+  <header class="header" id="header">
+    <div class="header__inner">
+
+      <button class="header__burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="index.html" class="header__logo" aria-label="BRODERS - Inicio">
+        <img src="./imagenes/logo%20broders.jpg" alt="BRODERS" />
+      </a>
+
+      <nav class="header__nav" aria-label="Navegación principal">
+        <a href="menu.html">MENÚ</a>
+        <a href="nosotros.html" aria-current="page">SOBRE NOSOTROS</a>
+        <a href="galeria.html">GALERÍA</a>
+        <a href="reservas.html">RESERVAS</a>
+        <a href="contacto.html">CONTACTO</a>
+      </nav>
+
+      <button class="header__user" aria-label="Cuenta de usuario" title="Cuenta de usuario (no disponible)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <circle cx="12" cy="8" r="4" />
+          <path d="M4 20c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- PANEL LATERAL MOBILE (drawer) -->
+  <div class="drawer-overlay" id="drawerOverlay" hidden></div>
+  <aside class="drawer" id="drawer" aria-hidden="true" aria-label="Menú de navegación móvil">
+    <div class="drawer__head">
+      <img src="./imagenes/logo%20broders.jpg" alt="BRODERS" class="drawer__logo" />
+      <button class="drawer__close" id="drawerClose" aria-label="Cerrar menú">&times;</button>
+    </div>
+    <nav class="drawer__nav">
+      <a href="index.html">INICIO</a>
+      <a href="menu.html">MENÚ</a>
+      <a href="nosotros.html" aria-current="page">SOBRE<br>NOSOTROS</a>
+      <a href="galeria.html">GALERÍA</a>
+      <a href="reservas.html">RESERVAS</a>
+      <a href="contacto.html">CONTACTO</a>
+    </nav>
+  </aside>
+
+  <main>
+
+    <section id="sobre" class="section section--about">
+      <div class="about">
+
+        <div class="video-texto__video">
+          <video controls preload="metadata" width="500">
+            <source 
+            src="./videos/video%20BRODERS.mp4" 
+            type="video/mp4">
+             tu navegador no puede reproducir este video.
+          </video>
+        </div>
+
+        <div class="about__content">
+          <p class="about__text">
+            En BRODERS creamos un espacio pensado como tu
+            &ldquo;Segunda Casa&rdquo;: un punto de encuentro relajado
+            en Nordelta para disfrutar entre amigos y familia.
+            Combinamos la mejor cerveza artesanal tirada con
+            hamburguesas caseras de calidad y una hermosa vista
+            frente al agua, ofreciendo una experiencia cercana,
+            auténtica e inclusiva para todos.
+          </p>
+          <a href="galeria.html" class="btn">GALERÍA</a>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> BRODERS — Bar &amp; Cervecería Artesanal · Nordelta, Argentina</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

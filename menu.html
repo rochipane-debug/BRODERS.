@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Menú de BRODERS: entradas, hamburguesas, ensaladas, panchos, postres, bebidas, tragos y cervezas." />
+  <title>MENÚ | BRODERS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="BRODERS.css" />
+</head>
+<body class="page-interna page-menu">
+
+  <!-- HEADER / NAVEGACIÓN (idéntico en las 6 páginas)
+       Desktop: logo izq + links + icono usuario der
+       Mobile:  hamburguesa izq + logo centro + icono usuario der -->
+  <header class="header" id="header">
+    <div class="header__inner">
+
+      <button class="header__burger" id="burgerBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer">
+        <span></span><span></span><span></span>
+      </button>
+
+      <a href="index.html" class="header__logo" aria-label="BRODERS - Inicio">
+        <img src="./imagenes/logo%20broders.jpg" alt="BRODERS" />
+      </a>
+
+      <nav class="header__nav" aria-label="Navegación principal">
+        <a href="menu.html" aria-current="page">MENÚ</a>
+        <a href="nosotros.html">SOBRE NOSOTROS</a>
+        <a href="galeria.html">GALERÍA</a>
+        <a href="reservas.html">RESERVAS</a>
+        <a href="contacto.html">CONTACTO</a>
+      </nav>
+
+      <button class="header__user" aria-label="Cuenta de usuario" title="Cuenta de usuario (no disponible)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+          <circle cx="12" cy="8" r="4" />
+          <path d="M4 20c0-4 3.6-6.5 8-6.5s8 2.5 8 6.5" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- PANEL LATERAL MOBILE (drawer) -->
+  <div class="drawer-overlay" id="drawerOverlay" hidden></div>
+  <aside class="drawer" id="drawer" aria-hidden="true" aria-label="Menú de navegación móvil">
+    <div class="drawer__head">
+      <img src="./imagenes/logo%20broders.jpg" alt="BRODERS" class="drawer__logo" />
+      <button class="drawer__close" id="drawerClose" aria-label="Cerrar menú">&times;</button>
+    </div>
+    <nav class="drawer__nav">
+      <a href="index.html">INICIO</a>
+      <a href="menu.html" aria-current="page">MENÚ</a>
+      <a href="nosotros.html">SOBRE<br>NOSOTROS</a>
+      <a href="galeria.html">GALERÍA</a>
+      <a href="reservas.html">RESERVAS</a>
+      <a href="contacto.html">CONTACTO</a>
+    </nav>
+  </aside>
+
+  <main>
+
+    <section id="menu" class="section section--menu">
+      <h2 class="section__title">MENÚ</h2>
+
+      <div class="menu-grid">
+
+        <!-- Columna izquierda -->
+        <div class="menu-col menu-col--a">
+
+          <div class="menu-cat">
+            <h3 class="menu-cat__title">ENTRADAS</h3>
+            <ul class="menu-list">
+              <li><span class="menu-list__name">Papas fritas</span><span class="menu-list__dots"></span><span class="menu-list__price">$7.700</span></li>
+              <li><span class="menu-list__name">Papas Jors</span><span class="menu-list__dots"></span><span class="menu-list__price">$8.500</span></li>
+              <li><span class="menu-list__name">Papas Broders</span><span class="menu-list__dots"></span><span class="menu-list__price">$12.000</span></li>
+              <li><span class="menu-list__name">Papas Cochinas</span><span class="menu-list__dots"></span><span class="menu-list__price">$12.500</span></li>
+              <li><span class="menu-list__name">Chicken fingers</span><span class="menu-list__dots"></span><span class="menu-list__price">$10.400</span></li>
+              <li><span class="menu-list__name">Bocaditos de muzzarella</span><span class="menu-list__dots"></span><span class="menu-list__price">$15.000</span></li>
+              <li><span class="menu-list__name">Empanadas fritas</span><span class="menu-list__dots"></span><span class="menu-list__price">$10.500</span></li>
+              <li><span class="menu-list__name">Nachos</span><span class="menu-list__dots"></span><span class="menu-list__price">$19.000</span></li>
+              <li><span class="menu-list__name">Picada frita</span><span class="menu-list__dots"></span><span class="menu-list__price">$25.000</span></li>
+              <li><span class="menu-list__name">Picada vegana</span><span class="menu-list__dots"></span><span class="menu-list__price">$12.900</span></li>
+            </ul>
+          </div>
+
+          <div class="menu-cat">
+            <h3 class="menu-cat__title">HAMBURGUESAS</h3>
+            <ul class="menu-list">
+              <li><span class="menu-list__name">Broders simple</span><span class="menu-list__dots"></span><span class="menu-list__price">$13.200</span></li>
+              <li><span class="menu-list__name">Broders doble</span><span class="menu-list__dots"></span><span class="menu-list__price">$16.000</span></li>
+              <li><span class="menu-list__name">L&rsquo;Alibro</span><span class="menu-list__dots"></span><span class="menu-list__price">$12.500</span></li>
+              <li><span class="menu-list__name">L&rsquo;Alibro doble</span><span class="menu-list__dots"></span><span class="menu-list__price">$15.400</span></li>
+              <li><span class="menu-list__name">La Pretenciosa</span><span class="menu-list__dots"></span><span class="menu-list__price">$13.500</span></li>
+              <li><span class="menu-list__name">La Pretenciosa doble</span><span class="menu-list__dots"></span><span class="menu-list__price">$16.100</span></li>
+              <li><span class="menu-list__name">Big Broder simple</span><span class="menu-list__dots"></span><span class="menu-list__price">$13.200</span></li>
+              <li><span class="menu-list__name">Big Broder doble</span><span class="menu-list__dots"></span><span class="menu-list__price">$15.400</span></li>
+              <li><span class="menu-list__name">La Classic</span><span class="menu-list__dots"></span><span class="menu-list__price">$13.200</span></li>
+              <li><span class="menu-list__name">La de Poio</span><span class="menu-list__dots"></span><span class="menu-list__price">$12.500</span></li>
+            </ul>
+          </div>
+
+          <div class="menu-cat">
+            <h3 class="menu-cat__title">ENSALADAS Y OTROS</h3>
+            <ul class="menu-list">
+              <li><span class="menu-list__name">Pechuga de pollo grille</span><span class="menu-list__dots"></span><span class="menu-list__price">$10.400</span></li>
+              <li><span class="menu-list__name">Obvio salad</span><span class="menu-list__dots"></span><span class="menu-list__price">$16.000</span></li>
+              <li><span class="menu-list__name">Obvio salad con pollo</span><span class="menu-list__dots"></span><span class="menu-list__price">$12.500</span></li>
+              <li><span class="menu-list__name">Caesar salad</span><span class="menu-list__dots"></span><span class="menu-list__price">$15.400</span></li>
+              <li><span class="menu-list__name">Caesar salad con pollo</span><span class="menu-list__dots"></span><span class="menu-list__price">$13.500</span></li>
+            </ul>
+          </div>
+
+          <div class="menu-cat">
+            <h3 class="menu-cat__title">PANCHOS</h3>
+            <ul class="menu-list">
+              <li><span class="menu-list__name">Pancho Broders</span><span class="menu-list__dots"></span><span class="menu-list__price">$9.700</span></li>
+              <li><span class="menu-list__name">Pinche tu pancho</span><span class="menu-list__dots"></span><span class="menu-list__price">$9.500</span></li>
+              <li><span class="menu-list__name">Pancho Criollo</span><span class="menu-list__dots"></span><span class="menu-list__price">$12.500</span></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Columna derecha -->
+        <div class="menu-col menu-col--b">
+
+          <div class="menu-cat">
+            <h3 class="menu-cat__title">POSTRES</h3>
+            <ul class="menu-list">
+              <li><span class="menu-list__name">Bocha de helado</span><span class="menu-list__dots"></span><span class="menu-list__price">$4.700</span></li>
+              <li><span class="menu-list__name">Chocotorta</span><span class="menu-list__dots"></span><span class="menu-list__price">$5.500</span></li>
+              <li><span class="menu-list__name">Flan</span><span class="menu-list__dots"></span><span class="menu-list__price">$6.000</span></li>
+            </ul>
+          </div>
+
+          <div class="menu-cat">
+            <h3 class="menu-cat__title">BEBIDAS SIN ALCOHOL</h3>
+            <ul class="menu-list">
+              <li><span class="menu-list__name">Agua sin gas</span><span class="menu-list__dots"></span><span class="menu-list__price">$3.200</span></li>
+              <li><span class="menu-list__name">Agua con gas</span><span class="menu-list__dots"></span><span class="menu-list__price">$3.200</span></li>
+              <li><span class="menu-list__name">Agua Saborizada</span><span class="menu-list__dots"></span><span class="menu-list__price">$3.500</span></li>
+              <li><span class="menu-list__name">Gaseosas</span><span class="menu-list__dots"></span><span class="menu-list__price">$3.600</span></li>
+            </ul>
+          </div>
+
+          <div class="menu-cat">
+            <h3 class="menu-cat__title">TRAGOS</h3>
+            <ul class="menu-list">
+              <li><span class="menu-list__name">Tinto de Verano</span><span class="menu-list__dots"></span><span class="menu-list__price">$9.200</span></li>
+              <li><span class="menu-list__name">Fernet</span><span class="menu-list__dots"></span><span class="menu-list__price">$12.000</span></li>
+              <li><span class="menu-list__name">Jarra de Fernet</span><span class="menu-list__dots"></span><span class="menu-list__price">$22.500</span></li>
+              <li><span class="menu-list__name">Campari</span><span class="menu-list__dots"></span><span class="menu-list__price">$11.400</span></li>
+              <li><span class="menu-list__name">Mojito</span><span class="menu-list__dots"></span><span class="menu-list__price">$13.500</span></li>
+              <li><span class="menu-list__name">Aperol Spritz</span><span class="menu-list__dots"></span><span class="menu-list__price">$13.100</span></li>
+            </ul>
+          </div>
+
+          <div class="menu-cat">
+            <h3 class="menu-cat__title">CERVEZAS</h3>
+            <ul class="menu-list">
+              <li><span class="menu-list__name">Pinta</span><span class="menu-list__dots"></span><span class="menu-list__price">$8.700</span></li>
+              <li><span class="menu-list__name">Media pinta</span><span class="menu-list__dots"></span><span class="menu-list__price">$6.000</span></li>
+              <li><span class="menu-list__name">Jarra de birra</span><span class="menu-list__dots"></span><span class="menu-list__price">$16.500</span></li>
+              <li><span class="menu-list__name">Cerveza sin tacc</span><span class="menu-list__dots"></span><span class="menu-list__price">$11.400</span></li>
+              <li><span class="menu-list__name">Lata de cerveza</span><span class="menu-list__dots"></span><span class="menu-list__price">$6.400</span></li>
+            </ul>
+            <!-- ===== MERCHANDISING: Remera BRODERS (ocupa el espacio libre) ===== -->
+          <div class="merch">
+            <figure class="merch__img">
+              <img src="./imagenes/remera%20BRODERS.jpeg" alt="Remera negra BRODERS con logo" loading="lazy" />
+            </figure>
+            <h3 class="merch__name">REMERA BRODERS</h3>
+            <p class="merch__price">$25.000</p>
+            <button type="button"
+                    class="merch__btn"
+                    id="comprarRemeraBtn"
+                    data-producto="Remera BRODERS"
+                    data-precio="25000">
+              COMPRAR
+            </button>
+            <p class="merch__msg" id="merchMsg" role="status" aria-live="polite"></p>
+          </div>
+          <!-- ===== FIN MERCHANDISING ===== -->
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> BRODERS — Bar &amp; Cervecería Artesanal · Nordelta, Argentina</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
